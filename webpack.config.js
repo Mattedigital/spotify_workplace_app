@@ -18,7 +18,7 @@ module.exports = {
                 modules: true,
                 localIdentName: '[hash:base64:5]__[local]'
             }}, 'sass-loader']},
-            {test: /\.(png|jpg|svg)$/, loader: 'url-loader?linit=8192'}
+            {test: /\.(png|jpg|svg|jpeg|gif)$/, loader: 'url-loader?linit=8192'}
         ]
     },
     devServer: {
@@ -26,6 +26,7 @@ module.exports = {
     },
     plugins: [
         new htmlWebpackPlugin({
+            title: 'Spudify',
             template: 'app/index.html',
             inject: false
         })
